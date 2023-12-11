@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Галерея</title>
-    <link rel="stylesheet" href="css.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ковальський Роман</title>
+  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 </head>
 <body>
-<div class="gallery">
-    <img src="img/1.jpg" alt="Image 1" data-rel="group1">
-    <img src="img/2.jpg" alt="Image 2" data-rel="group1">
-    <img src="img/3.jpg" alt="Image 3" data-rel="group1">
-    <img src="img/4.jpg" alt="Image 4" data-rel="group2">
-    <img src="img/5.jpg" alt="Image 5" data-rel="group2">
-    <img src="img/6.jpg" alt="Image 6" data-rel="group2">
-    <img src="img/7.jpg" alt="Image 7" data-rel="group3">
-    <img src="img/8.jpg" alt="Image 8" data-rel="group3">
-    <img src="img/9.jpg" alt="Image 9" data-rel="group3">
-</div>
+  <div class="gallery">
+    <a href="img/1.jpg" data-fancybox="gallery" data-caption="Зображення 1">
+      <img src="img/1.jpg" alt="Зображення 1">
+    </a>
+    <a href="img/2.jpg" data-fancybox="gallery" data-caption="Зображення 1">
+        <img src="img/2.jpg" alt="Зображення 1">
+      </a>
+      <a href="img/3.jpg" data-fancybox="gallery" data-caption="Зображення 1">
+        <img src="img/3.jpg" alt="Зображення 1">
+      </a>
+      <a href="img/4.jpg" data-fancybox="gallery" data-caption="Зображення 1">
+        <img src="img/4.jpg" alt="Зображення 1">
+      </a>
+      <a href="img/5.jpg" data-fancybox="gallery" data-caption="Зображення 1">
+        <img src="img/5.jpg" alt="Зображення 1">
+      </a>
+      <a href="img/6.jpg" data-fancybox="gallery" data-caption="Зображення 1">
+        <img src="img/6.jpg" alt="Зображення 1">
+      </a>
+  
+  </div>
 
-<div class="modal" id="myModal">
-    <div class="modal-content">
-        <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
-        <img id="modalImage" alt="Modal Image">
-        <span class="next" onclick="plusSlides(1)">&#10095;</span>
-    </div>
-</div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="js.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script src="js.js"></script>
+  <script>
+  
+    $(document).ready(function() {
+    
+      $('[data-fancybox="gallery"]').fancybox({
+        loop: true,
+        buttons: [
+          "zoom",
+          "slideShow",
+          "thumbs",
+          "close"
+        ],
+      });
+    });
+  </script>
 </body>
 </html>
